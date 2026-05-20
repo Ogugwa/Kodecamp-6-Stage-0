@@ -1,6 +1,243 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: poppins, sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: poppins, sans-serif;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 100px;
+}
+
+#navLinks {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+  flex: 1;
+  justify-content: center;
+}
+
+#navLinks a {
+  text-decoration: none;
+  color: #9e9aa7;
+  font-size: 16px;
+}
+
+#navButtons {
+  display: flex;
+  gap: 10px;
+}
+
+.login {
+  background: transparent;
+  border: none;
+  color: #9e9aa7;
+}
+
+.signup {
+  background: hsl(180, 66%, 49%);
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+}
+#mobileMenu {
+  display: none;
+}
+
+/* Hamburger hidden on desktop */
+.hamburger-menu {
+  display: none;
+}
+/* Hero section styling */
+.blue {
+  background-color: hsl(180, 66%, 49%);
+}
+.white {
+  color: white;
+}
+.grey {
+  color: hsl(257, 7%, 63%);
+}
+/* Form Section */
+.form-container {
+  margin-top: -50px;
+  margin-left: 50px;
+  padding: 20px;
+  background-image: url("./images/bg-shorten-desktop.svg");
+  background-size: cover;
+  background-color: hsl(257, 27%, 26%);
+  border-radius: 8px;
+  position: absolute;
+  width: 90vw;
+}
+
+/* Features Section */
+.features {
+  background: hsl(257, 7%, 63%);
+  padding: 70px 0;
+}
+.features-header {
+  margin-top: 50px;
+}
+.card-container {
+  display: flex;
+  padding: 10px;
+  width: 90vw;
+  margin: 0 auto;
+}
+.card {
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  position: relative;
+  height: auto;
+}
+.card img {
+  width: 50px;
+  border-radius: 50%;
+  background: black;
+  opacity: 1;
+  position: absolute;
+  top: -25px;
+  left: 10px;
+  flex: 1;
+}
+.card h3 {
+  margin: 15px 0 10px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.card2 {
+  margin-top: 30px;
+}
+.card3 {
+  margin-top: 60px;
+}
+/* Boost Links Section */
+.boost-links {
+  background-image: url("./images/bg-boost-desktop.svg");
+  background-size: cover;
+  background-color: hsl(257, 27%, 26%);
+  /* background: hsl(257, 27%, 26%); */
+  padding: 50px 20px;
+}
+footer {
+  /* border: 2px solid red; */
+  background-color: black;
+  color: white;
+  /* width: 100%; */
+}
+.footer-white {
+  fill: white;
+}
+.socials {
+  display: flex;
+  gap: 15px;
+}
+/* mobile settings*/
+@media (max-width: 768px) {
+  nav {
+    padding: 20px;
+  }
+
+  /* hide desktop nav */
+  #navLinks,
+  #navButtons {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+  .hamburger-menu img {
+    width: 30px;
+    height: 30px;
+  }
+
+  #mobileMenu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    left: 20px;
+    right: 20px;
+    background: hsl(257, 27%, 26%);
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+  }
+
+  #mobileLinks {
+    list-style: none;
+  }
+
+  #mobileLinks li {
+    margin-bottom: 15px;
+  }
+
+  #mobileLinks a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+  }
+
+  #mobileButtons {
+    border-top: 1px solid #9e9aa7;
+    margin-top: 15px;
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .signup {
+    width: 100%;
+  }
+  /* Hero section styling */
+  #hero {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .features {
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .card-container {
+    flex-direction: column;
+    width: 100%;
+  }
+  .form-container {
+    background-image: url("./images/bg-shorten-mobile.svg");
+  }
+  .boost-links {
+    background-image: url("./images/bg-boost-mobile.svg");
+  }
+  .footer-div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-align {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  .socials {
+    justify-content: center;
+  }
 }
