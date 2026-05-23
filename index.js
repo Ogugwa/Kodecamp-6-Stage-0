@@ -30,15 +30,13 @@ const submitBtn = document.getElementById("submitBtn");
 // Code to integrate the API into the form
 async function shortenURL(url) {
   try {
-    const response = await fetch(`https://cleanuri.com/api/v1/shorten`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ url }),
-    });
-    const data = await response.json();
-    return data.result_url;
+    const response = await fetch(
+      `https://tinyurl.com/api-create.php?url=${encodeURIComponent(url)}`,
+    );
+
+    const data = await response.text();
+
+    return data;
   } catch (error) {
     console.error("Error shortening URL:", error);
   }
